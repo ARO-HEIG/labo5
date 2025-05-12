@@ -17,3 +17,9 @@ WRITE_BACK?*
 d’une instruction qui est au stage WRITE_BACK?*
 
 *Réponse:* Oui celà peut causer problème, on appelle ce genre de dépendance des RAW (Read after Write). Après avoir fetch l'instruction on la "lit", on la décode. Cette étape va aller lire dans les registres concernée par cette instruction. Comme cette istruction dépend du résultat d’une instruction qui est au stage WRITE_BACK, alors le décode sera faussé vu que les registres concernés n'auront pas encore été mis à jour.
+
+## Question 3 
+
+*Quels informations doivent être mémorisées pour chaque instruction ?* 
+
+*Réponse:* "Si" on écrit dans un registre ou non, celà correspond à l'entrée "reg_bank_write_en_i". Et le registre à écrire, celà correspond à l'entrée "adr_reg_d_i".
