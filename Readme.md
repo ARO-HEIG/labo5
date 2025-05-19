@@ -28,4 +28,15 @@ d’une instruction qui est au stage WRITE_BACK?*
 
 *Quelles informations permettent de savoir si le registre D est utilisé ?*
 
-*Réponse:* Le signal "reg_bank_write_en_s" pipeliné et enregistré sur 3 coups de cloches nous permet de savoir si le regsitre à écrire est utilisé.
+*Réponse:* Le signal "reg_bank_write_en_s" pipeliné et enregistré sur 3 coups de clock nous permet de savoir si le regsitre à écrire est utilisé.
+
+
+## Question 5 
+
+*Quelles informations permettent de savoir si le registre S, N ou MEM sont utilisés ?*
+
+*Réponse:* Pour déterminer si les registres S, N ou MEM sont utilisés, il faut examiner les instructions de la porte OR :
+
+- Le registre S est utilisé si la 1ère opérande est lue.
+- Le registre N est utilisé si la 2ème opérande est lue.
+- Le registre MEM est utilisé si l'opérande est lue.
