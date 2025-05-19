@@ -23,3 +23,9 @@ d’une instruction qui est au stage WRITE_BACK?*
 *Quels informations doivent être mémorisées pour chaque instruction ?* 
 
 *Réponse:* "Si" on écrit dans un registre ou non, celà correspond à l'entrée "reg_bank_write_en_i". Et le registre à écrire, celà correspond à l'entrée "adr_reg_d_i".
+
+## Question 4 
+
+*Quelles informations permettent de savoir si le registre D est utilisé ?*
+
+*Réponse:* Le signal "reg_bank_write_en_s" pipeliné et enregistré sur 3 coups de cloches nous permet de savoir si le regsitre à écrire est utilisé.
