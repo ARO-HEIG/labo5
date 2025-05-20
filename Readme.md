@@ -40,3 +40,11 @@ d’une instruction qui est au stage WRITE_BACK?*
 - Le registre S est utilisé si la 1ère opérande est lue.
 - Le registre N est utilisé si la 2ème opérande est lue.
 - Le registre MEM est utilisé si l'opérande est lue.
+
+## Question 6
+
+*Une détection d’aléa de donnée va influencer quel(s) enable(s) d’étage du pipeline ? A quel
+moment? Pourquoi ?*
+
+*Réponse:* Lorsqu’un aléa de donnée est détecté dans le pipeline, cela impacte principalement les signaux "fetch_en_o" et "decode_en_o". Ces deux signaux sont désactivés au cycle où l’instruction en phase DECODE dépend d’une donnée qui n’est pas encore disponible, ce qui permet de geler les étages FETCH et DECODE. Ce gel empêche l’introduction de nouvelles instructions et maintient l’instruction fautive en DECODE jusqu’à ce que la donnée nécessaire soit prête, évitant ainsi toute propagation d’erreur dans les étapes suivantes du pipeline.
+
