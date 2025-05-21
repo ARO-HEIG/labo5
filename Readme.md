@@ -48,3 +48,25 @@ moment? Pourquoi ?*
 
 *Réponse:* Lorsqu’un aléa de donnée est détecté dans le pipeline, cela impacte principalement les signaux "fetch_en_o" et "decode_en_o". Ces deux signaux sont désactivés au cycle où l’instruction en phase DECODE dépend d’une donnée qui n’est pas encore disponible, ce qui permet de geler les étages FETCH et DECODE. Ce gel empêche l’introduction de nouvelles instructions et maintient l’instruction fautive en DECODE jusqu’à ce que la donnée nécessaire soit prête, évitant ainsi toute propagation d’erreur dans les étapes suivantes du pipeline.
 
+## Question 7
+
+*Quel est l’IPC du programme (01_main.S) dans votre circuit logisim?*
+
+-20 cycles   
+-16 instructions  
+
+IPC = 16/20 = 4/5 = 0.8
+
+*Quel est l’IPC du programme (02_main.S) dans votre circuit logisim?*
+
+-16 cycles  
+-12 instructions   
+
+IPC = 12/16 = 3/4 = 0.75
+
+*Quel est le rôle des intructions NOP placées à la fin des programmes ?*
+
+Les instructions NOP placées à la fin du programme permettent de vidanger correctement le pipeline. Dans un pipeline à 5 étages, même après le fetch de la dernière instruction utile, plusieurs cycles sont encore nécessaires pour que cette instruction atteigne l’étage de write-back. Les NOP assurent donc que le pipeline continue à fonctionner jusqu’à ce que toutes les instructions en cours soient entièrement exécutées. Sans ces NOP, le programme pourrait se terminer prématurément, interrompant certaines instructions avant qu'elles n’aient eu le temps de produire leurs résultats. Tester avec et sans NOP montre que, sans eux, certaines valeurs attendues dans les registres peuvent ne pas être écrites correctement.
+
+
+
