@@ -52,17 +52,17 @@ moment? Pourquoi ?*
 
 *Quel est l’IPC du programme (01_main.S) dans votre circuit logisim?*
 
--20 cycles   
+-26 cycles   
 -16 instructions  
 
-IPC = 16/20 = 4/5 = 0.8
+IPC = 16/26 = 0,61
 
 *Quel est l’IPC du programme (02_main.S) dans votre circuit logisim?*
 
--16 cycles  
+-24 cycles  
 -12 instructions   
 
-IPC = 12/16 = 3/4 = 0.75
+IPC = 12/24 = 1/2 = 0.5
 
 *Quel est le rôle des intructions NOP placées à la fin des programmes ?*
 
