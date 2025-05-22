@@ -39,7 +39,7 @@ d’une instruction qui est au stage WRITE_BACK?*
 
 - Le registre S est utilisé si la 1ère opérande est lue.
 - Le registre N est utilisé si la 2ème opérande est lue.
-- Le registre MEM est utilisé si l'opérande est lue.
+- Le registre MEM est utilisé si l'opérande source est lue.
 
 ## Question 6
 
