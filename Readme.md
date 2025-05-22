@@ -57,12 +57,22 @@ moment? Pourquoi ?*
 
 IPC = 16/26 = 0,61
 
+Chronogramme résultant:
+![chrono1](chrono/chrono1.png)
+
+## Question 8
+
 *Quel est l’IPC du programme (02_main.S) dans votre circuit logisim?*
 
 -24 cycles  
 -12 instructions   
 
 IPC = 12/24 = 1/2 = 0.5
+
+Chronogramme résultant:
+![chrono2](chrono/chrono2.png)
+
+## Question 9
 
 *Quel est le rôle des intructions NOP placées à la fin des programmes ?*
 
